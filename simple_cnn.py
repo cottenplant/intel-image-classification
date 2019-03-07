@@ -22,17 +22,20 @@ class ConvNet:
 
     def instantiate_model(self):
         # Need to structure neural network properly
-        self.model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(150, 150, 3)))
-        self.model.add(layers.MaxPooling2D((2, 2)))
-        self.model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-        self.model.add(layers.MaxPooling2D((2, 2)))
-        self.model.add(layers.Conv2D(128, (3, 3), activation='relu'))
-        self.model.add(layers.MaxPooling2D((2, 2)))
-        self.model.add(layers.Conv2D(128, (3, 3), activation='relu'))
-        self.model.add(layers.MaxPooling2D((2, 2)))
+        self.model.add(layers.Conv2D(150, (3, 3), activation='relu', input_shape=(150, 150, 3)))
+        self.model.add(layers.Conv2D(200, (3, 3), activation='relu'))
+        self.model.add(layers.MaxPooling2D((5, 5)))
+        self.model.add(layers.Conv2D(180, (3, 3), activation='relu'))
+        self.model.add(layers.Conv2D(140, (3, 3), activation='relu'))
+        self.model.add(layers.Conv2D(100, (3, 3), activation='relu'))
+        self.model.add(layers.Conv2D(50, (3, 3), activation='relu'))
+        self.model.add(layers.MaxPooling2D((5, 5)))
         self.model.add(layers.Flatten())
-        self.model.add(layers.Dense(512, activation='relu'))
-        self.model.add(layers.Dense(5, activation='sigmoid'))
+        self.model.add(layers.Dense(180, activation='relu'))
+        self.model.add(layers.Dense(100, activation='relu'))
+        self.model.add(layers.Dense(150, activation='relu'))
+        self.model.add(layers.Dropout(rate=0.5))
+        self.model.add(layers.Dense(6, activation='softmax'))
 
         self.model.summary()
 
