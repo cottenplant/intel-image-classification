@@ -1,0 +1,15 @@
+from setuptools import setup
+from setuptools import find_packages
+
+setup(name='trainer',
+      version='0.1',
+      packages=find_packages(),
+      description='classifier on google cloud',
+      author='samco',
+      author_email='samcotten@gmail.com',
+      license='MIT',
+      install_requires=[
+            'keras',
+            'h5py'
+      ],
+      zip_safe=False)

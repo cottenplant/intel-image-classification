@@ -39,7 +39,7 @@ class ConvNet:
                            metrics=['accuracy'])
 
     def __str__(self):
-        return str(self.model.summary())
+        return self.model.summary()
 
     def network(self):
         self.model.add(Conv2D(72, (3, 3), padding='same', input_shape=(150, 150, 3), activation='relu'))
