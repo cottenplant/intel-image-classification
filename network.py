@@ -86,6 +86,7 @@ class ConvNet:
         plt.ylabel('Loss')
         plt.xlabel('Epoch')
         plt.legend(['Train', 'Test'], loc='upper left')
+        plt.savefig('figures/model_loss.png')
         plt.show()
 
 
