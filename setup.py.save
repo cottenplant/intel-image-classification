@@ -9,8 +9,8 @@ setup(name='trainer',
       author_email='samcotten@gmail.com',
       license='MIT',
       install_requires=[
-            'tensorflow',
-            'keras',
+            
+'keras',
             'h5py'
       ],
       zip_safe=False)
