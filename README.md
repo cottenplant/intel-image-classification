@@ -1,7 +1,8 @@
 # intel-image-classification
 training a convnet to predict various scenes from the Kaggel Intel Image dataset
 
-Training on gcloud archtitexture
+Training on gcloud archtitecture
+Current accuracy = 53.4%
 
 ```
 from keras.preprocessing.image import ImageDataGenerator
