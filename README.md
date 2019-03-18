@@ -3,7 +3,7 @@ training a convnet to predict various scenes from the Kaggel Intel Image dataset
 
 Training on gcloud archtitecture
 Current accuracy = 53.4% (in progress)
-
+```
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
 =================================================================
@@ -38,3 +38,4 @@ dense_4 (Dense)              (None, 6)                 390
 Total params: 197,230
 Trainable params: 197,230
 Non-trainable params: 0
+```
